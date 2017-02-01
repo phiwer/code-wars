@@ -19,17 +19,15 @@ namespace WhichAreIn
     {
         public static string[] inArray(string[] array1, string[] array2)
         {
-            var subStringsOfStrings = new SortedSet<string>();
-            // your code
-            foreach (var subString in array1)
-            {
-                //if(IsSubStringOf())
-                if (array2.Where(x => x.Contains(subString)).Any())
-                {
-                    subStringsOfStrings.Add(subString);
-                }
-            }
-            return subStringsOfStrings.ToArray();
+            return array1.Where(x => x.IsSubStringsOf(array2.AsEnumerable())).OrderBy(x => x).ToArray();
+        }
+    }
+
+    static class StringExtensions
+    {
+        public static bool IsSubStringsOf(this string str, IEnumerable<string> strings)
+        {
+            return strings.Any(x => x.Contains(str));
         }
     }
 
