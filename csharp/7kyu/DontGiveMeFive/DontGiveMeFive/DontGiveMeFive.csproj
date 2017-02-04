@@ -55,8 +55,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="RegionGeneratorTests.cs" />
-    <Compile Include="RegionGenerator.cs" />
+    <Compile Include="DontGiveMeFiveTests.cs" />
+    <Compile Include="DontGiveMeFive.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
